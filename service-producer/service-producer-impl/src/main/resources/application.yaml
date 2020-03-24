@@ -1,0 +1,18 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: service-producer
+  zipkin:
+    base-url: http://zipkin:9411
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+
+logging:
+  level:
+    root: debug
+    sun: error
